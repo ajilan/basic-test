@@ -1,1 +1,10 @@
-<h3> I am the List componeny</h3>
+
+<button class=" display btn btn-primary" 
+[disabled] = "!btnShow" 
+(click)="onCreateButton()">Display details</button>
+<!--<p>{{showSecret}}</p> -->
+<p *ngIf="showSecret ; else noShow">Secret password = 'tuna'</p>
+  <!--  <ng-template #noShow> <p>generate password </p> -->
+<div *ngFor = "let logItem of log" 
+[ngStyle]="{backgroundColor: logItem >=5 ? 'blue' : 'transparent'}"
+[ngClass]= "{'white-text' : logItem >= 5}">{{logItem}}</div>
