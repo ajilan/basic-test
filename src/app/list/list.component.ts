@@ -9,6 +9,7 @@ import { Component } from "@angular/core";
 export class ListComponent {
     btnShow = false;
     showSecret = false;
+    log = [];
     constructor (){
         setTimeout(() => {
             this.btnShow = true;
@@ -16,5 +17,6 @@ export class ListComponent {
     }
     onCreateButton(){
      this.showSecret = true; // or !this.showSecret
+     this.log.push(this.log.length + 1)
     }
 }
