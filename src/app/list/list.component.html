@@ -1,4 +1,7 @@
 
 <button class=" display btn btn-primary" 
+[disabled] = "!btnShow" 
 (click)="onCreateButton()">Display details</button>
-<p>{{showSecret}}</p>
+<!--<p>{{showSecret}}</p> -->
+<p *ngIf="showSecret ; else noShow">Secret password = 'tuna'</p>
+    <ng-template #noShow> <p>generate password </p>

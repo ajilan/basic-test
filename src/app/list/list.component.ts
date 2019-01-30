@@ -7,11 +7,14 @@ import { Component } from "@angular/core";
     styleUrls : ['./list.component.css']
 })
 export class ListComponent {
-    showSecret = '';
+    btnShow = false;
+    showSecret = false;
     constructor (){
-        
+        setTimeout(() => {
+            this.btnShow = true;
+        }, 2000);
     }
     onCreateButton(){
-     this.showSecret = 'Secret password = tuna';
+     this.showSecret = true; // or !this.showSecret
     }
 }
