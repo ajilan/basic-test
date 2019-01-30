@@ -7,8 +7,11 @@ import { Component } from "@angular/core";
     styleUrls : ['./list.component.css']
 })
 export class ListComponent {
-
+    showSecret = '';
     constructor (){
-
+        
+    }
+    onCreateButton(){
+     this.showSecret = 'Secret password = tuna';
     }
 }
